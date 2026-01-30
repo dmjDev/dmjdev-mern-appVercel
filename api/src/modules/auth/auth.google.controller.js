@@ -56,7 +56,7 @@ export const loginGoogle = async (req, res) => {
                 res.cookie('token', token, {    // añadimos a nuestra respuesta hacia el FRONTEND el token generado
                     httpOnly: true, // El navegador no puede acceder vía JS (previene XSS)
                     secure: true,   // Solo se envía por HTTPS
-                    sameSite: 'strict', // strict - Previene ataques CSRF
+                    sameSite: 'none', // strict - Previene ataques CSRF
                     maxAge: TOKENTIME
                 })
                 res.cookie('isLoggedIn', 'true')
@@ -113,7 +113,7 @@ export const loginGoogle = async (req, res) => {
                 res.cookie('token', token, {    // añadimos a nuestra respuesta hacia el FRONTEND el token generado
                     httpOnly: true, // El navegador no puede acceder vía JS (previene XSS)
                     secure: true,   // Solo se envía por HTTPS
-                    sameSite: 'strict', // strict - Previene ataques CSRF
+                    sameSite: 'none', // strict - Previene ataques CSRF
                     maxAge: TOKENTIME
                 })
                 res.cookie('isLoggedIn', 'true')

@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken'
 
 export const authRequired = (req, res, next) => {
     const { token } = req.cookies   // recuperamos el token de las cookies del FRONTEND gracias a cookieParser
-    // console.log('token', token)
+    console.log('token', token)
 
     if (!token) {
         res.clearCookie('isLoggedIn')
