@@ -1,0 +1,12 @@
+.containerCard {
+    @apply bg-zinc-800 max-w-md w-full p-10 rounded-md;
+}
+.containerButtonCard {
+    @apply flex gap-x-2 items-center;
+}
+.cardTitle {
+    @apply text-2xl font-bold text-zinc-500;
+}
+.cardDate {
+    @apply text-sm text-zinc-500;
+}

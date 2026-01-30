@@ -1,0 +1,15 @@
+.containerTasks {
+    @apply flex h-[calc(100vh-100px)] justify-center;
+}
+.tasksList {
+    @apply bg-zinc-800 mr-1 max-w-md w-full p-10 rounded-md text-right text-sm text-zinc-500 overflow-y-auto max-h-[90vh];
+}
+.taskForm {
+    @apply bg-zinc-800 ml-1 max-w-2/3 w-full p-10 rounded-md overflow-y-auto max-h-[90vh];
+}
+.taskFormTitle {
+    @apply text-2xl font-bold pb-2 flex justify-between;
+}
+.tasksPageStyle {
+    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2;
+}

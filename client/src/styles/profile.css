@@ -1,0 +1,91 @@
+.profile-container {
+@apply flex min-h-[calc(100vh-100px)] p-4 bg-zinc-800 text-zinc-300 rounded-xl;
+}
+
+
+.profile-card {
+@apply w-full max-w-xl rounded-2xl p-12 bg-zinc-900 shadow-2xl m-auto shrink-0;
+}
+
+
+.profile-header {
+@apply flex gap-4 mb-6;
+}
+
+
+.profile-avatar {
+@apply w-20 h-20 rounded-full object-cover;
+}
+
+
+.profile-title {
+@apply text-2xl font-bold pr-2;
+}
+
+
+.profile-subtitle {
+@apply text-sm text-zinc-600;
+}
+
+
+.profile-fields {
+@apply flex flex-col gap-3;
+}
+
+
+.profile-field {
+@apply flex items-center justify-between rounded-xl p-4 bg-zinc-700;
+}
+
+
+.profile-field-left {
+@apply flex items-center gap-3;
+}
+
+
+.profile-edit-btn {
+@apply text-cyan-700 hover:opacity-80 transition cursor-pointer;
+}
+
+
+.profile-modal-backdrop {
+@apply fixed inset-0 flex items-center justify-center bg-black/50 z-50;
+}
+
+
+.profile-modal {
+@apply w-full max-w-md rounded-2xl p-6 bg-zinc-800;
+}
+
+
+.profile-modal-title {
+@apply text-xl font-semibold mb-4;
+}
+
+
+.profile-input {
+@apply w-full px-4 py-2 mb-4 rounded-lg bg-zinc-700 text-zinc-300 outline-none focus:outline-none hover:outline-none;
+}
+
+
+.profile-modal-actions {
+@apply flex justify-end gap-3;
+}
+
+
+.profile-btn-secondary {
+@apply px-4 py-2 rounded-lg bg-cyan-700 text-zinc-300 hover:opacity-80 cursor-pointer disabled:cursor-not-allowed disabled:bg-gray-400 transition-colors;
+}
+
+.profile-btn-close {
+@apply px-4 py-2 rounded-lg bg-zinc-700 text-zinc-300 hover:opacity-80 cursor-pointer;
+}
+
+
+.profile-btn-primary {
+@apply px-4 py-2 rounded-lg bg-cyan-700 text-zinc-300 hover:opacity-90 cursor-pointer;
+}
+
+.textPercent {
+    @apply font-light text-sm text-zinc-500
+}

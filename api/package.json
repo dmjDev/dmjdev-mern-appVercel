@@ -1,0 +1,32 @@
+{
+  "name": "dmjdev-mern-vercel-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon --env-file=.env index.js",
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "nodemon": "^3.1.11"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "google-auth-library": "^10.5.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.1.2",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
+    "nodemailer": "^7.0.12",
+    "sharp": "^0.34.5",
+    "zod": "^4.3.5"
+  }
+}

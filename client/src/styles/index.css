@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@import "./auth.css";
+@import "./profile.css";
+
+@import './home.css';
+
+@import "./card.css";
+@import "./tasks.css";
+
+body {
+    @apply bg-zinc-900 text-zinc-300;
+}
+hr {
+    @apply border-t border-gray-600 border-dashed my-2;
+}
+
+li {
+    @apply flex items-center p-0 m-0;
+}
+
+/* ESTILOS FORMULARIOS, Estilos Input y Label sobre los campos  de formulario */
+.inputForm {
+    @apply px-4 py-2 my-3 w-full bg-zinc-700 text-white rounded-md focus:outline-none focus:ring-0;
+}
+.input-container {
+    @apply relative;
+}
+.input-container label {
+    @apply absolute -top-2 left-2.5 px-2 py-1.5 bg-zinc-800 text-xs text-zinc-600 border-0 rounded-b-md pointer-events-none;
+}
+.input-container input:focus+label {
+    @apply text-cyan-700 border-0;
+}
+.input-container textarea:focus+label {
+    @apply text-cyan-700 border-0;
+}
+.input-error {
+    @apply text-[12px] text-red-500;
+}
+
+/* BOTONES */
+.formButton {
+    @apply text-2xl text-white font-medium justify-center flex items-center mt-10 py-1 w-full border border-transparent rounded-md bg-cyan-700 focus:border-0 focus:ring-offset-transparent focus:bg-zinc-700 focus:outline-hidden focus:outline-none active:bg-amber-800 hover:bg-zinc-700 hover:cursor-pointer;
+}
+.eyeButton {
+    @apply h-10 p-1 mt-3 ml-1 cursor-pointer rounded-md bg-zinc-700 hover:bg-zinc-500 outline-none;
+}
+.circleButton {
+    @apply rounded-full text-sm text-white font-bold justify-center flex items-center p-0 m-0 pl-1 pr-1 border border-transparent bg-cyan-700 focus:border-0 focus:ring-offset-transparent focus:bg-zinc-700 focus:outline-hidden focus:outline-none active:bg-amber-800 hover:bg-zinc-700 hover:cursor-pointer;
+}
+
+/* ESTILOS NAVBAR */
+.navStyle {
+    @apply sticky top-0 z-1000 bg-zinc-700 my-2 flex justify-between py-2 px-5 rounded-lg;
+}
+.titleNAvbar {
+    @apply overflow-hidden whitespace-nowrap;
+}
+.ulNavbar {
+    @apply flex gap-x-2;
+}
+.NavbarButton {
+    @apply border rounded-lg border-zinc-600 bg-zinc-700 px-4 py-2 font-medium text-lg text-white whitespace-nowrap overflow-hidden focus:border-0 focus:ring-offset-transparent focus:bg-cyan-700 focus:outline-hidden focus:outline-none active:bg-amber-800 hover:border-transparent hover:bg-cyan-700 hover:cursor-pointer;
+    @apply align-bottom;
+}
+.NavbarButtonRound {
+    @apply border rounded-full border-zinc-600 bg-zinc-700 font-extrabold text-white text-2xl whitespace-nowrap overflow-hidden focus:border-0 focus:ring-offset-transparent focus:bg-cyan-700 focus:outline-hidden focus:outline-none active:bg-amber-800 hover:border-transparent hover:bg-cyan-700 hover:cursor-pointer;
+    @apply inline-flex items-center justify-center px-0 py-0 w-10 h-10 align-top;
+}
+.NavbarButtonWindow {
+    @apply flex items-center gap-4 w-full text-left px-4 py-2 text-lg text-white hover:bg-cyan-700 transition-colors rounded-xl cursor-pointer
+}
+.NavbarButtonWindow-container {
+    @apply absolute right-0 mt-30 w-40 rounded-xl shadow-2xl bg-zinc-900 z-20 overflow-hidden border-zinc-700 border-[0.5px]
+}
+
+/* LINK */
+.linkStyle-lg {
+    @apply text-xl font-bold relative text-cyan-700 transition-colors duration-300 cursor-pointer;
+}
+.linkStyle-md {
+    @apply pl-2 relative text-cyan-700 transition-colors duration-300 cursor-pointer;
+}
+.decoLinkStyle {
+    @apply absolute left-0 bottom-0 w-0 h-0.5 bg-cyan-700 transition-all duration-300;
+}
+/* El hover lo manejamos mediante la clase group que estará en el padre */
+.linkStyle-lg:hover .decoLinkStyle, 
+.linkStyle-md:hover .decoLinkStyle {
+    @apply w-full;
+}
+
+
+/* LOADING */
+.containerLoad {
+    @apply flex h-[calc(100vh-100px)] items-center justify-center;
+}
+.subContainerLoad {
+    @apply bg-zinc-800 max-w-md w-full p-10 rounded-md;
+}
+.loadText {
+    @apply text-2xl font-bold;
+}

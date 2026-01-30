@@ -1,0 +1,21 @@
+.shadow-glow {
+    @apply shadow-[0_0_20px_5px] shadow-cyan-700/40;
+}
+.containerAuth {
+    @apply flex h-[calc(100vh-100px)];
+}
+.subContainerAuth {
+    @apply bg-zinc-800 max-w-md w-full p-10 rounded-md m-auto;
+}
+.authErrors {
+    @apply inline-flex bg-red-500 text-white px-4 py-2 rounded-md my-1 mr-2 whitespace-pre-line;
+}
+.authTitle {
+    @apply text-2xl font-bold pb-3;
+}
+.authComment {
+    @apply text-[12px] text-gray-400;
+}
+.authFoot {
+    @apply flex gap-x-2 justify-between text-gray-400 font-bold align-bottom;
+}
