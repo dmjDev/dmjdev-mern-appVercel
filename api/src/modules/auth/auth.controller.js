@@ -46,6 +46,7 @@ export const register = async (req, res) => {
             httpOnly: true, // El navegador no puede acceder vía JS (previene XSS)
             secure: true,   // Solo se envía por HTTPS
             sameSite: 'none', // strict - Previene ataques CSRF
+            partitioned: true, // Compatibilidad con navegadores estrictos con las cookies de otros dominios (Firefox)
             maxAge: TOKENTIME
         })
         res.cookie('isLoggedIn', 'true')
@@ -154,6 +155,7 @@ export const login = async (req, res) => {
                 httpOnly: true, // El navegador no puede acceder vía JS (previene XSS)
                 secure: true,   // Solo se envía por HTTPS
                 sameSite: 'none', // strict - Previene ataques CSRF
+                partitioned: true, // Compatibilidad con navegadores estrictos con las cookies de otros dominios (Firefox)
                 maxAge: TOKENTIME
             })
             res.cookie('isLoggedIn', 'true')
@@ -267,7 +269,8 @@ export const logout = async (req, res) => {
             res.clearCookie('token', {
                 httpOnly: true,
                 secure: true,
-                sameSite: 'none'
+                sameSite: 'none',
+                partitioned: true // Compatibilidad con navegadores estrictos con las cookies de otros dominios (Firefox)
             })
             res.clearCookie('isLoggedIn')
             // Forzamos la eliminación de todas las cookies en el Frontend, únicamente funciona con HTTPS y en LOCALHOST
@@ -305,6 +308,7 @@ export const updateToken = async (req, res) => {
             httpOnly: true,
             secure: true,
             sameSite: 'none',
+            partitioned: true, // Compatibilidad con navegadores estrictos con las cookies de otros dominios (Firefox)
             maxAge: TOKENTIME
         }).status(200).json({ message: "Token renovado" }); // ¡IMPORTANTE cerrar la respuesta!
 

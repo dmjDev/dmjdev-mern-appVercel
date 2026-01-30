@@ -57,6 +57,7 @@ export const loginGoogle = async (req, res) => {
                     httpOnly: true, // El navegador no puede acceder vía JS (previene XSS)
                     secure: true,   // Solo se envía por HTTPS
                     sameSite: 'none', // strict - Previene ataques CSRF
+                    partitioned: true, // Compatibilidad con navegadores estrictos con las cookies de otros dominios (Firefox)
                     maxAge: TOKENTIME
                 })
                 res.cookie('isLoggedIn', 'true')
@@ -114,6 +115,7 @@ export const loginGoogle = async (req, res) => {
                     httpOnly: true, // El navegador no puede acceder vía JS (previene XSS)
                     secure: true,   // Solo se envía por HTTPS
                     sameSite: 'none', // strict - Previene ataques CSRF
+                    partitioned: true, // Compatibilidad con navegadores estrictos con las cookies de otros dominios (Firefox)
                     maxAge: TOKENTIME
                 })
                 res.cookie('isLoggedIn', 'true')
