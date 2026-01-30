@@ -14,7 +14,7 @@ app.set('trust proxy', true)
 
 // Indicamos los parámetros CORS para que EXPRESS de acceso al FRONTEND, además añadimos credenciales para que el servidor tenga acceso a las cookies del FRONTEND mediante cookieParser
 app.use(cors({
-    origin: "*",//process.env.URL_FRONTEND,
+    origin: process.env.URL_FRONTEND,
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
